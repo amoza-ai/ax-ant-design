@@ -2,7 +2,7 @@
 === 002_make-ui-concept ===== DONE ===
 
 - Setup React project:
-    + Install react library: react router, i18n, mobx, sass
+    + Install react library: react index, i18n, mobx, sass
     + Install ant design library
     + Setup source structure and configuration
     + Setup eslint and prettier

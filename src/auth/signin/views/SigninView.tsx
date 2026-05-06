@@ -2,7 +2,7 @@ import { observer } from 'mobx-react-lite'
 import { Button, Form, Input, Typography } from 'antd'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { useStore } from '../../../shared/store/store.context'
+import { useStore } from '../../../acore/store/store.context'
 
 export const SigninView = observer(function SigninView() {
   const { signin } = useStore()

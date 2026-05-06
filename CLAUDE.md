@@ -18,17 +18,23 @@ The repo currently holds the default Vite + React 19 + TypeScript starter (`src/
 ### Planned dependencies (per `tasks/001`)
 Ant Design, React Router, i18n, MobX, Sass. None of these are installed yet — `package.json` only contains React + Vite tooling. Add them as the relevant task calls for them, not preemptively.
 
-### Planned source structure (per `tasks/001`)
+### Source structure (per `tasks/001`)
 ```
 src/
+  acore/                         # framework wiring; nothing feature-specific
+    config/                      # app constants, env
+    setup/                       # i18n init, router
+    theme/                       # antd theme + Sass color tokens
+    common/                      # shared utilities
+    store/                       # RootStore + StoreContext
+    storage/                     # localStorage/sessionStorage wrappers
   agent/
   assets/
   auth/{signin,signup,reset,verify}/{store,views}/
   pages/{home,main,error}/{store,views}/
-  styles/
   shared/{app-layout,auth-layout,components}/
 ```
-Each feature folder is split into `store/` (MobX) and `views/` (React components). Match this layout when creating new feature folders rather than inventing alternatives.
+Each feature folder is split into `store/` (MobX) and `views/` (React components). The root MobX store lives at `src/acore/store/root.store.ts` and aggregates per-feature stores; access it from components via `useStore()` from `src/acore/store/store.context.ts`. Brand colors are defined once in `src/acore/theme/styles/_colors.scss` and mirrored as antd tokens in `src/acore/theme/theme.ts` — change both together.
 
 ### Brand colors (per `tasks/001`)
 Primary `#3F51B5`, Secondary `#009688`, Tertiary `#673AB7`, Error `#F44336`, Warning `#FF9800`, Info `#2196F3`, Success `#4CAF50`. Wire these through the Ant Design theme / Sass variables once those layers exist — don't hard-code them per component.

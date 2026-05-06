@@ -1,16 +1,16 @@
 import { ConfigProvider } from 'antd'
 import { RouterProvider } from 'react-router-dom'
-import { StoreContext } from './shared/store/store.context'
-import { rootStore } from './shared/store/root.store'
-import { router } from './router'
-import { axTheme } from './styles/theme'
-import './i18n'
+import { StoreContext } from './acore/store/store.context'
+import { rootStore } from './acore/store/root.store'
+import { index } from './acore/router'
+import { axTheme } from './acore/theme/theme'
+import './acore/i18n'
 
 function App() {
   return (
     <StoreContext.Provider value={rootStore}>
       <ConfigProvider theme={axTheme}>
-        <RouterProvider router={router} />
+        <RouterProvider router={index} />
       </ConfigProvider>
     </StoreContext.Provider>
   )
