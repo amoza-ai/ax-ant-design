@@ -1,0 +1,20 @@
+@use './colors' as *;
+
+:root {
+  --ax-primary: #{$ax-primary};
+  --ax-secondary: #{$ax-secondary};
+  --ax-tertiary: #{$ax-tertiary};
+  --ax-error: #{$ax-error};
+  --ax-warning: #{$ax-warning};
+  --ax-info: #{$ax-info};
+  --ax-success: #{$ax-success};
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}

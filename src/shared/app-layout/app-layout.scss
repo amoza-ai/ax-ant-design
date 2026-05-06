@@ -1,0 +1,32 @@
+@use '../../styles/colors' as *;
+
+.app-layout {
+  min-height: 100vh;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    background: $ax-primary;
+    padding-inline: 24px;
+  }
+
+  &__brand {
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 32px;
+  }
+
+  &__menu {
+    flex: 1;
+    background: transparent;
+  }
+
+  &__content {
+    padding: 24px;
+  }
+
+  &__footer {
+    text-align: center;
+  }
+}

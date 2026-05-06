@@ -1,0 +1,19 @@
+{
+  "app": {
+    "name": "Ax",
+    "tagline": "Ant Design starter"
+  },
+  "nav": {
+    "home": "Home",
+    "main": "Main"
+  },
+  "auth": {
+    "signin": "Sign in",
+    "signup": "Sign up",
+    "reset": "Reset password",
+    "verify": "Verify"
+  },
+  "error": {
+    "notFound": "Page not found"
+  }
+}
