@@ -10,6 +10,8 @@ export const axColors = {
   success: '#4CAF50',
 } as const
 
+export const axFontFamily = `'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`
+
 export const axTheme: ThemeConfig = {
   token: {
     colorPrimary: axColors.primary,
@@ -17,5 +19,6 @@ export const axTheme: ThemeConfig = {
     colorSuccess: axColors.success,
     colorWarning: axColors.warning,
     colorError: axColors.error,
+    fontFamily: axFontFamily,
   },
 }
