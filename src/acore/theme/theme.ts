@@ -10,7 +10,7 @@ export const axColors = {
   info: '#2196F3',
   success: '#4CAF50',
 
-  body: '#f0f0f0',
+  body: '#bfbfbf',
   panel: '#f5f5f5',
   action: '#434343',
 } as const
@@ -31,6 +31,9 @@ export const axTheme: ThemeConfig = {
       headerBg: axColors.body,
       footerBg: axColors.body,
       siderBg: axColors.body,
+    },
+    Splitter: {
+      splitBarSize: 2,
     },
   },
 }

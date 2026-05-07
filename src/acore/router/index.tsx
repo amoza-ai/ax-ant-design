@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom'
 import { AppLayout } from '../../shared/app-layout/AppLayout.tsx'
 import { AuthLayout } from '../../shared/auth-layout/AuthLayout.tsx'
-import { HomeView } from '../../pages/home/views/HomeView.tsx'
+import { HomePage } from '../../pages/home/HomePage.tsx'
 import { MainView } from '../../pages/main/views/MainView.tsx'
 import { NotFoundView } from '../../pages/error/views/NotFoundView.tsx'
 import { SigninView } from '../../auth/signin/views/SigninView.tsx'
@@ -14,7 +14,7 @@ export const index = createBrowserRouter([
     path: '/',
     element: <AppLayout />,
     children: [
-      { index: true, element: <HomeView /> },
+      { index: true, element: <HomePage /> },
       { path: 'main', element: <MainView /> },
     ],
   },

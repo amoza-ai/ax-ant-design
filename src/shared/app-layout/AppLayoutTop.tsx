@@ -8,10 +8,7 @@ export const AppLayoutTop = observer(() => {
       <Flex align="center" justify="space-between" gap="small">
         <Flex align="center" justify="start" gap="small">
           <Space>
-            <Tooltip title="Action Title">
-              <Button type="text" icon={<RobotOutlined style={{ fontSize: '20px' }} />} />
-            </Tooltip>
-            <Tooltip title="Action Title">
+            <Tooltip title="Action Title" autoAdjustOverflow>
               <Button type="text" icon={<RobotOutlined style={{ fontSize: '20px' }} />} />
             </Tooltip>
           </Space>
@@ -34,10 +31,10 @@ export const AppLayoutTop = observer(() => {
             </Tooltip>
           </Space>
           <Space>
-            <Tooltip title="Action Title">
+            <Tooltip title="Action Title" autoAdjustOverflow>
               <Button type="text" icon={<RobotOutlined style={{ fontSize: '20px' }} />} />
             </Tooltip>
-            <Tooltip title="Action Title">
+            <Tooltip title="Action Title" autoAdjustOverflow>
               <Button type="text" icon={<RobotOutlined style={{ fontSize: '20px' }} />} />
             </Tooltip>
           </Space>
