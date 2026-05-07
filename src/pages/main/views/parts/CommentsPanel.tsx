@@ -1,11 +1,5 @@
 import { Avatar, Button, Divider, Input, List, Space, Typography, theme } from 'antd'
-import {
-  EllipsisOutlined,
-  MessageOutlined,
-  PaperClipOutlined,
-  SendOutlined,
-  SmileOutlined,
-} from '@ant-design/icons'
+import { EllipsisOutlined, MessageOutlined, PaperClipOutlined, SendOutlined, SmileOutlined } from '@ant-design/icons'
 import { comments } from './data'
 
 const { Text } = Typography
@@ -14,10 +8,7 @@ export function CommentsPanel() {
   const { token } = theme.useToken()
 
   return (
-    <section
-      className="panel"
-      style={{ background: token.colorBgContainer, borderLeft: `1px solid ${token.colorBorderSecondary}` }}
-    >
+    <section className="panel" style={{ background: token.colorBgContainer, borderLeft: `1px solid ${token.colorBorderSecondary}` }}>
       <header className="panel__head" style={{ borderBottom: `1px solid ${token.colorBorderSecondary}` }}>
         <Space size={6}>
           <MessageOutlined style={{ color: token.colorPrimary }} />
@@ -29,8 +20,12 @@ export function CommentsPanel() {
         <Space size={8} align="center">
           <Avatar size="small">M</Avatar>
           <div>
-            <Text type="secondary" style={{ fontSize: token.fontSizeSM }}>Opened by</Text>
-            <div><Text strong>Marcus W.</Text></div>
+            <Text type="secondary" style={{ fontSize: token.fontSizeSM }}>
+              Opened by
+            </Text>
+            <div>
+              <Text strong>Marcus W.</Text>
+            </div>
           </div>
         </Space>
         <Divider style={{ margin: `${token.marginSM}px 0` }} />
@@ -56,17 +51,16 @@ export function CommentsPanel() {
           )}
         />
       </div>
-      <footer
-        className="panel__foot"
-        style={{ borderTop: `1px solid ${token.colorBorderSecondary}` }}
-      >
+      <footer className="panel__foot" style={{ borderTop: `1px solid ${token.colorBorderSecondary}` }}>
         <Input.TextArea rows={2} placeholder="Reply…" autoSize={{ minRows: 2, maxRows: 4 }} />
         <Space style={{ width: '100%', justifyContent: 'space-between', marginTop: token.marginXS }}>
           <Space size={2}>
             <Button type="text" size="small" icon={<PaperClipOutlined />} />
             <Button type="text" size="small" icon={<SmileOutlined />} />
           </Space>
-          <Button type="primary" size="small" icon={<SendOutlined />}>Send</Button>
+          <Button type="primary" size="small" icon={<SendOutlined />}>
+            Send
+          </Button>
         </Space>
       </footer>
     </section>

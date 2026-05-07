@@ -13,16 +13,10 @@ export const SigninView = observer(function SigninView() {
       <Typography.Title level={3}>{t('auth.signin')}</Typography.Title>
       <Form layout="vertical">
         <Form.Item label="Email">
-          <Input
-            value={signin.email}
-            onChange={(e) => signin.setEmail(e.target.value)}
-          />
+          <Input value={signin.email} onChange={(e) => signin.setEmail(e.target.value)} />
         </Form.Item>
         <Form.Item label="Password">
-          <Input.Password
-            value={signin.password}
-            onChange={(e) => signin.setPassword(e.target.value)}
-          />
+          <Input.Password value={signin.password} onChange={(e) => signin.setPassword(e.target.value)} />
         </Form.Item>
         <Button type="primary" block loading={signin.loading}>
           {t('auth.signin')}

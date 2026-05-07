@@ -1,10 +1,5 @@
 import { Badge, Button, List, Segmented, Space, Tag, Typography, theme } from 'antd'
-import {
-  CheckCircleFilled,
-  EllipsisOutlined,
-  FlagOutlined,
-  PlusOutlined,
-} from '@ant-design/icons'
+import { CheckCircleFilled, EllipsisOutlined, FlagOutlined, PlusOutlined } from '@ant-design/icons'
 import { tasks } from './data'
 
 const { Text } = Typography
@@ -13,10 +8,7 @@ export function TaskListPanel() {
   const { token } = theme.useToken()
 
   return (
-    <section
-      className="panel"
-      style={{ background: token.colorBgContainer, borderRight: `1px solid ${token.colorBorderSecondary}` }}
-    >
+    <section className="panel" style={{ background: token.colorBgContainer, borderRight: `1px solid ${token.colorBorderSecondary}` }}>
       <header className="panel__head" style={{ borderBottom: `1px solid ${token.colorBorderSecondary}` }}>
         <Space size={6}>
           <FlagOutlined style={{ color: token.colorPrimary }} />
@@ -42,7 +34,9 @@ export function TaskListPanel() {
                 ) : (
                   <Badge status={t.status === 'doing' ? 'processing' : 'default'} />
                 )}
-                <Text ellipsis style={{ flex: 1 }}>{t.title}</Text>
+                <Text ellipsis style={{ flex: 1 }}>
+                  {t.title}
+                </Text>
               </Space>
               <Tag color={t.priority === 'P1' ? 'red' : 'blue'} style={{ marginInlineEnd: 0 }}>
                 {t.priority}

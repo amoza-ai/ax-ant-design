@@ -1,9 +1,5 @@
 import { Button, Input, Space, Tree, Typography, theme } from 'antd'
-import {
-  EllipsisOutlined,
-  SearchOutlined,
-  UnorderedListOutlined,
-} from '@ant-design/icons'
+import { EllipsisOutlined, SearchOutlined, UnorderedListOutlined } from '@ant-design/icons'
 import { outlineTree } from './data'
 
 const { Text } = Typography
@@ -12,10 +8,7 @@ export function OutlinePanel() {
   const { token } = theme.useToken()
 
   return (
-    <section
-      className="panel"
-      style={{ background: token.colorBgContainer, borderRight: `1px solid ${token.colorBorderSecondary}` }}
-    >
+    <section className="panel" style={{ background: token.colorBgContainer, borderRight: `1px solid ${token.colorBorderSecondary}` }}>
       <header className="panel__head" style={{ borderBottom: `1px solid ${token.colorBorderSecondary}` }}>
         <Space size={6}>
           <UnorderedListOutlined style={{ color: token.colorPrimary }} />
@@ -27,13 +20,7 @@ export function OutlinePanel() {
         <Input size="small" prefix={<SearchOutlined />} placeholder="Document Name" allowClear />
       </div>
       <div className="panel__body panel__body--padded">
-        <Tree
-          treeData={outlineTree}
-          defaultExpandAll
-          blockNode
-          showLine
-          selectable={false}
-        />
+        <Tree treeData={outlineTree} defaultExpandAll blockNode showLine selectable={false} />
       </div>
     </section>
   )

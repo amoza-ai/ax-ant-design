@@ -86,7 +86,13 @@ export const stack: StackRow[] = [
 ]
 
 export const comments: CommentItem[] = [
-  { id: 'c1', author: 'Lela K.', initial: 'L', body: 'Re: PostgreSQL — agreed on the JSONB choice, but flag the partitioning story before we commit.', time: '2h' },
+  {
+    id: 'c1',
+    author: 'Lela K.',
+    initial: 'L',
+    body: 'Re: PostgreSQL — agreed on the JSONB choice, but flag the partitioning story before we commit.',
+    time: '2h',
+  },
   { id: 'c2', author: 'Marcus W.', initial: 'M', body: '@Lela good call. Adding a sub-section on partition keys.', time: '1h' },
   { id: 'c3', author: 'Priya N.', initial: 'P', body: 'Should we add a row for object storage? S3 vs GCS came up earlier.', time: '38m' },
   { id: 'c4', author: 'Marcus W.', initial: 'M', body: 'Yes — pulling that into row 16. Will note egress cost as a tiebreaker.', time: '12m' },
