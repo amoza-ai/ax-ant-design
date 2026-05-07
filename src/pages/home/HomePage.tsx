@@ -3,8 +3,7 @@ import { ConfigProvider, Splitter } from 'antd'
 import { createStyles } from 'antd-style'
 import { DisplayPanel } from './views/DisplayPanel.tsx'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const useStyles = createStyles(({ token }) => ({
+const useStyles = createStyles(() => ({
   dragger: {
     '&::before': {
       background: '#bfbfbf !important',

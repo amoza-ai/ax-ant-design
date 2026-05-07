@@ -1,13 +1,8 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
 import { AppLayout } from '../../shared/app-layout/AppLayout.tsx'
-import { AuthLayout } from '../../shared/auth-layout/AuthLayout.tsx'
 import { HomePage } from '../../pages/home/HomePage.tsx'
-import { MainView } from '../../pages/main/views/MainView.tsx'
+import { MainPage } from '../../pages/main/MainPage.tsx'
 import { NotFoundView } from '../../pages/error/views/NotFoundView.tsx'
-import { SigninView } from '../../auth/signin/views/SigninView.tsx'
-import { SignupView } from '../../auth/signup/views/SignupView.tsx'
-import { ResetView } from '../../auth/reset/views/ResetView.tsx'
-import { VerifyView } from '../../auth/verify/views/VerifyView.tsx'
 
 export const index = createBrowserRouter([
   {
@@ -15,18 +10,7 @@ export const index = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: 'main', element: <MainView /> },
-    ],
-  },
-  {
-    path: '/auth',
-    element: <AuthLayout />,
-    children: [
-      { index: true, element: <Navigate to="signin" replace /> },
-      { path: 'signin', element: <SigninView /> },
-      { path: 'signup', element: <SignupView /> },
-      { path: 'reset', element: <ResetView /> },
-      { path: 'verify', element: <VerifyView /> },
+      { path: 'main', element: <MainPage /> },
     ],
   },
   { path: '*', element: <NotFoundView /> },

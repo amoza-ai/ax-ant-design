@@ -45,13 +45,13 @@ export function DocumentTabs() {
   const { token } = theme.useToken()
   return (
     <div
-      className="main-view__tabs"
+      className="main-page__tabs"
       style={{
         background: token.colorBgContainer,
         borderBottom: `1px solid ${token.colorBorderSecondary}`,
       }}
     >
-      <Tabs type="editable-card" activeKey="doc1" items={items} hideAdd={false} className="main-view__tabs-bar" />
+      <Tabs type="editable-card" activeKey="doc1" items={items} hideAdd={false} className="main-page__tabs-bar" />
       <Space size="small">
         <Avatar.Group max={{ count: 4 }} size="small">
           {['L', 'M', 'P', 'R', 'K'].map((c) => (

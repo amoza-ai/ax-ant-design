@@ -1,6 +1,6 @@
 import { Avatar, Button, Divider, Input, List, Space, Typography, theme } from 'antd'
 import { EllipsisOutlined, MessageOutlined, PaperClipOutlined, SendOutlined, SmileOutlined } from '@ant-design/icons'
-import { comments } from './data'
+import { comments } from '../data'
 
 const { Text } = Typography
 
@@ -8,7 +8,7 @@ export function CommentsPanel() {
   const { token } = theme.useToken()
 
   return (
-    <section className="panel" style={{ background: token.colorBgContainer, borderLeft: `1px solid ${token.colorBorderSecondary}` }}>
+    <section className="panel" style={{ background: token.colorBgContainer }}>
       <header className="panel__head" style={{ borderBottom: `1px solid ${token.colorBorderSecondary}` }}>
         <Space size={6}>
           <MessageOutlined style={{ color: token.colorPrimary }} />

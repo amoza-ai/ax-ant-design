@@ -1,7 +1,7 @@
 import { Breadcrumb, Button, Space, Table, Tag, Typography, theme } from 'antd'
 import { EditOutlined, EllipsisOutlined, FileTextOutlined, HistoryOutlined, StarOutlined } from '@ant-design/icons'
 import type { ColumnsType } from 'antd/es/table'
-import { stack, type StackRow } from './data'
+import { stack, type StackRow } from '../data'
 
 const { Title, Paragraph, Text } = Typography
 

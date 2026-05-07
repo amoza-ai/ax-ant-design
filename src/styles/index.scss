@@ -1,15 +1,5 @@
-@use 'colors' as *;
+@use 'ax-variables' as *;
 @use 'ax-layout' as *;
-
-:root {
-  --ax-primary: #{$ax-primary};
-  --ax-secondary: #{$ax-secondary};
-  --ax-tertiary: #{$ax-tertiary};
-  --ax-error: #{$ax-error};
-  --ax-warning: #{$ax-warning};
-  --ax-info: #{$ax-info};
-  --ax-success: #{$ax-success};
-}
 
 html,
 body,

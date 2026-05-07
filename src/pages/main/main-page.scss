@@ -1,6 +1,8 @@
-.main-view {
+.main-page {
   flex: 1;
   min-height: 0;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
@@ -34,24 +36,6 @@
   &__panels {
     flex: 1;
     min-height: 0;
-  }
-
-  &__handle {
-    width: 1px;
-    cursor: col-resize;
-    transition: background 0.15s;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0 -3px;
-    }
-
-    &:hover,
-    &:active {
-      background: rgba(63, 81, 181, 0.5) !important;
-    }
   }
 }
 
