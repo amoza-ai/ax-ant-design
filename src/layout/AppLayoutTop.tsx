@@ -3,7 +3,6 @@ import { observer } from 'mobx-react-lite'
 import { AxMenuIcon } from '../shared/menu-icon/AxMenuIcon.tsx'
 
 import avatarLight from '../assets/avatar-light.png'
-import { AxMuiIcon } from '../shared/mui-icon/AxMuiIcon.tsx'
 import { AxMenuBox } from '../shared/menu-box/AxMenuBox.tsx'
 
 export const AppLayoutTop = observer(() => {
@@ -20,21 +19,16 @@ export const AppLayoutTop = observer(() => {
           </Space>
           <Divider vertical style={{ height: '28px' }} />
           <Space size={8}>
-            <AxMenuBox icon={<AxMuiIcon icon="mdiFolderOutline" />} label="aPlanner" />
-            <AxMenuBox icon={<AxMuiIcon icon="mdiSourceBranch" />} label="Main" />
+            <AxMenuBox icon="mdiFolderOutline" label="aPlanner" />
+            <AxMenuBox icon="mdiSourceBranch" label="Main" />
           </Space>
         </Flex>
         <Flex align="center" justify="end" gap="small">
           <Space size={8}>
-            <AxMenuIcon icon={<AxMuiIcon icon="mdiMagnify" />} title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
-            <AxMenuIcon icon={<AxMuiIcon icon="mdiBellOutline" />} title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
-            <AxMenuIcon
-              icon={<AxMuiIcon icon="mdiAccountCircleOutline" />}
-              title={'System Settings'}
-              placement="bottomRight"
-              onClick={() => console.log('click')}
-            />
-            <AxMenuIcon icon={<AxMuiIcon icon="mdiCogOutline" />} title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
+            <AxMenuIcon icon="mdiMagnify" title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
+            <AxMenuIcon icon="mdiBellOutline" title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
+            <AxMenuIcon icon="mdiAccountCircleOutline" title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
+            <AxMenuIcon icon="mdiCogOutline" title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
           </Space>
         </Flex>
       </Flex>

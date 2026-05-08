@@ -1,11 +1,11 @@
 import { observer } from 'mobx-react-lite'
-import { cloneElement, type ReactElement } from 'react'
+import { cloneElement, isValidElement, type ReactElement } from 'react'
 import { Flex, Tooltip } from 'antd'
 import type { TooltipPlacement } from 'antd/es/tooltip'
 import { AxMuiIcon } from '../mui-icon/AxMuiIcon.tsx'
 
 export type AxMenuIconProps = {
-  icon: ReactElement
+  icon: string | ReactElement
   label: string
   title?: string
   placement?: TooltipPlacement
@@ -13,9 +13,11 @@ export type AxMenuIconProps = {
 }
 
 export const AxMenuBox = observer((props: AxMenuIconProps) => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
-  const myIcon = cloneElement(props.icon, { size: '20px', className: 'ax-menu-box_icon' })
+  const myIcon = isValidElement(props.icon) ? (
+    cloneElement(props.icon, { size: '20px', className: 'ax-menu-box_icon' } as never)
+  ) : (
+    <AxMuiIcon icon={props.icon} size="20px" className="ax-menu-box_icon" />
+  )
   return (
     <Tooltip title={props.title} placement={props.placement}>
       <button className="ax-menu-box" onClick={props.onClick}>
