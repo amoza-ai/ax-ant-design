@@ -1,7 +1,5 @@
 import { observer } from 'mobx-react-lite'
-
-import DotsVerticalIcon from 'mdi-react/DotsVerticalIcon'
-import CameraMeteringMatrixIcon from 'mdi-react/CameraMeteringMatrixIcon'
+import { AxMuiIcon } from '../../../shared/mui-icon/AxMuiIcon.tsx'
 
 export const DisplayPanel = observer(() => {
   return (
@@ -9,13 +7,13 @@ export const DisplayPanel = observer(() => {
       <div className="ax-display-panel_header">
         <div className="ax-display-panel_header_title">
           <div className="ax-display-panel_header_title_icon">
-            <CameraMeteringMatrixIcon size="20px" />
+            <AxMuiIcon icon="mdiCameraMeteringMatrix" size="20px" />
           </div>
           <div className="ax-display-panel_header_title_text">Display Panel</div>
         </div>
         <div className="ax-display-panel_header_actions">
           <button className="ax-display-panel_header_action_button">
-            <DotsVerticalIcon className="ax-display-panel_header_action_button_icon" size="20px" />
+            <AxMuiIcon icon="mdiDotsVertical" className="ax-display-panel_header_action_button_icon" size="20px" />
           </button>
         </div>
       </div>

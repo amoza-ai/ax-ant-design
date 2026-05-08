@@ -1,9 +1,15 @@
-@use 'ax-variables' as *;
+.ax-action-icon {
+  @apply w-8 h-8 rounded-md cursor-pointer flex items-center justify-center;
+  @apply bg-transparent text-inherit transition-colors duration-150 ease-in-out;
 
-.ax-icon-action {
-  width: 32px;
-  height: 32px;
-  @apply cursor-pointer flex items-center justify-center;
+  &:hover {
+    @apply bg-black/5;
+  }
+
+  &:active,
+  &.is-active {
+    @apply bg-ax-primary text-white;
+  }
 }
 
 .ax-display-panel {

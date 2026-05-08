@@ -1,16 +1,9 @@
 import { Avatar, Divider, Flex, Layout, Space, Tooltip } from 'antd'
 import { observer } from 'mobx-react-lite'
-import { IconAction } from '../shared/icon-action/IconAction.tsx'
+import { AxActionIcon } from '../shared/action-icon/AxActionIcon.tsx'
 
 import avatarLight from '../assets/avatar-light.png'
-
-import HomeLightningBoltOutlineIcon from 'mdi-react/HomeLightningBoltOutlineIcon'
-
-import CogOutlineIcon from 'mdi-react/CogOutlineIcon'
-import MenuIcon from 'mdi-react/MenuIcon'
-import MagnifyIcon from 'mdi-react/MagnifyIcon'
-import BellOutlineIcon from 'mdi-react/BellOutlineIcon'
-import AccountCircleOutlineIcon from 'mdi-react/AccountCircleOutlineIcon'
+import { AxMuiIcon } from '../shared/mui-icon/AxMuiIcon.tsx'
 
 export const AppLayoutTop = observer(() => {
   return (
@@ -26,16 +19,26 @@ export const AppLayoutTop = observer(() => {
           </Space>
           <Divider vertical style={{ height: '28px' }} />
           <Space size={8}>
-            <IconAction icon={<HomeLightningBoltOutlineIcon />} title={'Home'} placement="bottom" onClick={() => console.log('click')} />
-            <IconAction icon={<MenuIcon />} title={'Menu'} placement="bottom" onClick={() => console.log('click')} />
+            <AxActionIcon
+              icon={<AxMuiIcon icon="mdiHomeLightningBoltOutline" />}
+              title={'System Settings'}
+              placement="bottomRight"
+              onClick={() => console.log('click')}
+            />
+            <AxActionIcon icon={<AxMuiIcon icon="mdiMenu" />} title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
           </Space>
         </Flex>
         <Flex align="center" justify="end" gap="small">
           <Space size={8}>
-            <IconAction icon={<MagnifyIcon />} title={'Global Search'} placement="bottom" onClick={() => console.log('click')} />
-            <IconAction icon={<AccountCircleOutlineIcon />} title={'User Account'} placement="bottom" onClick={() => console.log('click')} />
-            <IconAction icon={<BellOutlineIcon />} title={'Notifications'} placement="bottomRight" onClick={() => console.log('click')} />
-            <IconAction icon={<CogOutlineIcon />} title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
+            <AxActionIcon icon={<AxMuiIcon icon="mdiMagnify" />} title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
+            <AxActionIcon
+              icon={<AxMuiIcon icon="mdiAccountCircleOutline" />}
+              title={'System Settings'}
+              placement="bottomRight"
+              onClick={() => console.log('click')}
+            />
+            <AxActionIcon icon={<AxMuiIcon icon="mdiBellOutline" />} title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
+            <AxActionIcon icon={<AxMuiIcon icon="mdiCogOutline" />} title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
           </Space>
         </Flex>
       </Flex>
