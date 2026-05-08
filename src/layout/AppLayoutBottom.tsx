@@ -3,6 +3,7 @@ import { observer } from 'mobx-react-lite'
 import { AxBreadcrumb } from '../shared/breadcrumb/AxBreadcrumb.tsx'
 import { AxIconBox } from '../shared/icon-box/AxIconBox.tsx'
 import { AxChatItem } from '../shared/chat-item/AxChatItem.tsx'
+import { AxMenuIcon } from '../shared/menu-icon/AxMenuIcon.tsx'
 
 export const AppLayoutBottom = observer(() => {
   return (
@@ -23,6 +24,7 @@ export const AppLayoutBottom = observer(() => {
             <AxChatItem name="Logan Ng - CPO" count={3} title={`Logan Ng - CPO: 3 messages`} />
             <AxChatItem name="Logan Ng - CPO" count={3} title={`Logan Ng - CPO: 3 messages`} />
             <AxChatItem name="Logan Ng - CPO" count={3} title={`Logan Ng - CPO: 3 messages`} />
+            <AxMenuIcon icon="mdiArrowUpDropCircleOutline" title={'More Items'} placement="topRight" onClick={() => console.log('click')} />
           </Space>
         </Flex>
       </Flex>
