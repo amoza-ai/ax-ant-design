@@ -16,6 +16,8 @@ export const AppLayoutRight = observer(() => {
         <Flex align="center" justify="end" gap="small" vertical style={{ width: '100%' }}>
           <Space size={8} vertical>
             <AxMenuIcon icon={<AxMuiIcon icon="mdiProgressStarFourPoints" />} title={'Progress'} placement="left" onClick={() => console.log('click')} />
+            <AxMenuIcon icon={<AxMuiIcon icon="mdiFaceAgent" />} title={'Support'} placement="left" onClick={() => console.log('click')} />
+            <AxMenuIcon icon={<AxMuiIcon icon="mdiInformationSlabCircleOutline" />} title={'Guides'} placement="left" onClick={() => console.log('click')} />
           </Space>
         </Flex>
       </Flex>

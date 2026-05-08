@@ -1,6 +1,42 @@
 .ax-menu-icon {
-  @apply w-8 h-8 rounded-md cursor-pointer flex items-center justify-center;
+  @apply w-7 h-7 rounded-md cursor-pointer flex items-center justify-center;
   @apply bg-transparent text-inherit transition-colors duration-150 ease-in-out;
+
+  &:hover {
+    @apply bg-black/5;
+  }
+
+  &:active,
+  &.is-active {
+    @apply bg-ax-primary text-white;
+  }
+}
+
+.ax-menu-box {
+  @apply w-auto h-7 rounded-md cursor-pointer flex items-center justify-center px-1;
+  @apply bg-transparent text-inherit transition-colors duration-150 ease-in-out;
+
+  &_text {
+    @apply text-ellipsis font-medium;
+  }
+
+  &:hover {
+    @apply bg-black/5;
+  }
+
+  &:active,
+  &.is-active {
+    @apply bg-ax-primary text-white;
+  }
+}
+
+.ax-breadcrumb {
+  @apply w-auto h-7 rounded-md cursor-pointer flex items-center justify-center px-1;
+  @apply bg-transparent text-inherit transition-colors duration-150 ease-in-out;
+
+  &_text {
+    @apply text-sm text-ellipsis font-medium;
+  }
 
   &:hover {
     @apply bg-black/5;
@@ -23,11 +59,13 @@
       &_icon {
         @apply w-6 h-6 flex items-center justify-center;
       }
+
       &_text {
         @apply font-semibold;
       }
     }
   }
+
   &_body {
     @apply w-full h-full p-2;
   }

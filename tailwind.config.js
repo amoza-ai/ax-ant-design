@@ -12,6 +12,12 @@ export default {
         'ax-info': '#2196f3',
         'ax-success': '#4caf50',
       },
+      fontFamily: {
+        sans: ['Roboto', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+      },
+      fontSize: {
+        base: ['14px', '1.5'],
+      },
     },
   },
   plugins: [],
