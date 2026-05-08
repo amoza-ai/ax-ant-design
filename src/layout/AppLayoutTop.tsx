@@ -6,7 +6,7 @@ import avatarLight from '../assets/avatar-light.png'
 
 import HomeLightningBoltOutlineIcon from 'mdi-react/HomeLightningBoltOutlineIcon'
 
-import CogIcon from 'mdi-react/CogIcon'
+import CogOutlineIcon from 'mdi-react/CogOutlineIcon'
 import MenuIcon from 'mdi-react/MenuIcon'
 import MagnifyIcon from 'mdi-react/MagnifyIcon'
 import BellOutlineIcon from 'mdi-react/BellOutlineIcon'
@@ -35,7 +35,7 @@ export const AppLayoutTop = observer(() => {
             <IconAction icon={<MagnifyIcon />} title={'Global Search'} placement="bottom" onClick={() => console.log('click')} />
             <IconAction icon={<AccountCircleOutlineIcon />} title={'User Account'} placement="bottom" onClick={() => console.log('click')} />
             <IconAction icon={<BellOutlineIcon />} title={'Notifications'} placement="bottomRight" onClick={() => console.log('click')} />
-            <IconAction icon={<CogIcon />} title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
+            <IconAction icon={<CogOutlineIcon />} title={'System Settings'} placement="bottomRight" onClick={() => console.log('click')} />
           </Space>
         </Flex>
       </Flex>

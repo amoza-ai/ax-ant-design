@@ -26,31 +26,41 @@ export const HomePage = observer(() => {
     <ConfigProvider
       theme={{
         components: {
-          Splitter: { splitBarSize: 2, splitTriggerSize: 16 },
+          Splitter: { splitBarSize: 4, splitTriggerSize: 16 },
         },
       }}
     >
       <Splitter
-        style={{ height: '100%', width: '100%' }}
-        vertical
         draggerIcon={null}
+        style={{ height: '100%', width: '100%' }}
         classNames={{ dragger: { default: styles.dragger, active: styles.draggerActive } }}
       >
-        <Splitter.Panel defaultSize="75%" min="20%" max="90%">
-          <Splitter draggerIcon={null} classNames={{ dragger: { default: styles.dragger, active: styles.draggerActive } }}>
-            <Splitter.Panel defaultSize="15%" min="10%" max="80%">
-              <DisplayPanel />
+        <Splitter.Panel style={{ padding: 0, paddingRight: '2px' }} defaultSize="75%" min="20%" max="90%">
+          <Splitter vertical draggerIcon={null} classNames={{ dragger: { default: styles.dragger, active: styles.draggerActive } }}>
+            <Splitter.Panel style={{ padding: 0, paddingBottom: '2px' }} defaultSize="75%" min="15%" max="85%">
+              <Splitter draggerIcon={null} classNames={{ dragger: { default: styles.dragger, active: styles.draggerActive } }}>
+                <Splitter.Panel style={{ padding: 0, paddingRight: '2px' }} defaultSize="15%" min="10%" max="80%">
+                  <DisplayPanel />
+                </Splitter.Panel>
+                <Splitter.Panel style={{ padding: 0, paddingLeft: '2px' }} defaultSize="70%" min="10%" max="80%">
+                  <DisplayPanel />
+                </Splitter.Panel>
+              </Splitter>
             </Splitter.Panel>
-            <Splitter.Panel defaultSize="70%" min="10%" max="80%">
-              <DisplayPanel />
-            </Splitter.Panel>
-            <Splitter.Panel defaultSize="15%" min="10%" max="80%">
+            <Splitter.Panel style={{ padding: 0, paddingTop: '2px' }} defaultSize="25%" min="15%" max="85%">
               <DisplayPanel />
             </Splitter.Panel>
           </Splitter>
         </Splitter.Panel>
-        <Splitter.Panel defaultSize="25%" min="10%" max="80%">
-          <DisplayPanel />
+        <Splitter.Panel style={{ padding: 0, paddingLeft: '2px' }} defaultSize="25%" min="10%" max="80%">
+          <Splitter vertical draggerIcon={null} classNames={{ dragger: { default: styles.dragger, active: styles.draggerActive } }}>
+            <Splitter.Panel style={{ padding: 0, paddingBottom: '2px' }} defaultSize="50%" min="15%" max="85%">
+              <DisplayPanel />
+            </Splitter.Panel>
+            <Splitter.Panel style={{ padding: 0, paddingTop: '2px' }} defaultSize="50%" min="15%" max="85%">
+              <DisplayPanel />
+            </Splitter.Panel>
+          </Splitter>
         </Splitter.Panel>
       </Splitter>
     </ConfigProvider>
