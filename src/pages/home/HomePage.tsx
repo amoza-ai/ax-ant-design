@@ -2,6 +2,11 @@ import { observer } from 'mobx-react-lite'
 import { ConfigProvider, Splitter, theme } from 'antd'
 import { createStyles } from 'antd-style'
 import { AxSimplePanel } from '../../shared/simple-panel/AxSimplePanel.tsx'
+import { TaskInfoView } from './views/TaskInfoView.tsx'
+import { ConsoleView } from './views/ConsoleView.tsx'
+import { ProgressView } from './views/ProgressView.tsx'
+import { GenerativeAIView } from './views/GenerativeAIView.tsx'
+import { DocumentView } from './views/DocumentView.tsx'
 
 const useStyles = createStyles(({ token }) => ({
   dragger: {
@@ -42,19 +47,19 @@ export const HomePage = observer(() => {
               <Splitter draggerIcon={null} classNames={{ dragger: { default: styles.dragger, active: styles.draggerActive } }}>
                 <Splitter.Panel style={{ padding: 0, paddingRight: '2px' }} defaultSize="15%" min="10%" max="80%">
                   <AxSimplePanel icon="mdiCardTextOutline" title="Task Info">
-                    Project Execution
+                    <TaskInfoView />
                   </AxSimplePanel>
                 </Splitter.Panel>
                 <Splitter.Panel style={{ padding: 0, paddingLeft: '2px' }} defaultSize="70%" min="10%" max="80%">
                   <AxSimplePanel icon="mdiFileDocumentOutline" title="Document Name">
-                    Main Content
+                    <DocumentView />
                   </AxSimplePanel>
                 </Splitter.Panel>
               </Splitter>
             </Splitter.Panel>
             <Splitter.Panel style={{ padding: 0, paddingTop: '2px' }} defaultSize="25%" min="15%" max="85%">
               <AxSimplePanel icon="mdiConsole" title="Console">
-                Terminal
+                <ConsoleView />
               </AxSimplePanel>
             </Splitter.Panel>
           </Splitter>
@@ -63,12 +68,12 @@ export const HomePage = observer(() => {
           <Splitter vertical draggerIcon={null} classNames={{ dragger: { default: styles.dragger, active: styles.draggerActive } }}>
             <Splitter.Panel style={{ padding: 0, paddingBottom: '2px' }} defaultSize="50%" min="15%" max="85%">
               <AxSimplePanel icon="mdiCreationOutline" title="Generative AI">
-                Generative AI
+                <GenerativeAIView />
               </AxSimplePanel>
             </Splitter.Panel>
             <Splitter.Panel style={{ padding: 0, paddingTop: '2px' }} defaultSize="50%" min="15%" max="85%">
               <AxSimplePanel icon="mdiProgressStarFourPoints" title="Progress">
-                Progress
+                <ProgressView />
               </AxSimplePanel>
             </Splitter.Panel>
           </Splitter>
