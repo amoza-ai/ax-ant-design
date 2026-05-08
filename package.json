@@ -14,12 +14,11 @@
   "dependencies": {
     "@ant-design/icons": "^6.2.2",
     "@fontsource/roboto": "^5.2.10",
-    "@mdi/js": "^7.4.47",
-    "@mdi/react": "^1.6.1",
     "antd": "^6.3.7",
     "antd-style": "^4.1.0",
     "i18next": "^26.0.9",
     "i18next-browser-languagedetector": "^8.2.1",
+    "mdi-react": "^9.4.0",
     "mobx": "^6.15.2",
     "mobx-react-lite": "^4.1.1",
     "react": "^19.2.5",

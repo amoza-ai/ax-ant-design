@@ -1,0 +1,7 @@
+@use 'ax-variables' as *;
+
+.ax-icon-action {
+  width: 24px;
+  height: 24px;
+  @apply cursor-pointer flex items-center justify-center;
+}

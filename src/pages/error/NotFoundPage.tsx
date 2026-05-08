@@ -3,7 +3,7 @@ import { Result, Button } from 'antd'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-export const NotFoundView = observer(function NotFoundView() {
+export const NotFoundPage = observer(function NotFoundView() {
   const { t } = useTranslation()
   return (
     <Result

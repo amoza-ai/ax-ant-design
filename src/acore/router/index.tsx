@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { AppLayout } from '../../shared/app-layout/AppLayout.tsx'
+import { AppLayout } from '../../layout/AppLayout.tsx'
 import { HomePage } from '../../pages/home/HomePage.tsx'
 import { MainPage } from '../../pages/main/MainPage.tsx'
-import { NotFoundView } from '../../pages/error/views/NotFoundView.tsx'
+import { NotFoundPage } from '../../pages/error/NotFoundPage.tsx'
 
 export const index = createBrowserRouter([
   {
@@ -13,5 +13,5 @@ export const index = createBrowserRouter([
       { path: 'main', element: <MainPage /> },
     ],
   },
-  { path: '*', element: <NotFoundView /> },
+  { path: '*', element: <NotFoundPage /> },
 ])
