@@ -35,5 +35,10 @@ export const axTheme: ThemeConfig = {
     Splitter: {
       splitBarSize: 2,
     },
+    Divider: {
+      orientationMargin: 0,
+      textPaddingInline: 0,
+      verticalMarginInline: 0,
+    },
   },
 }
