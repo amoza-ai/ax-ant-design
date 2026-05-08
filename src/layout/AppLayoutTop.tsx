@@ -12,9 +12,9 @@ export const AppLayoutTop = observer(() => {
       <Flex align="center" justify="space-between" gap="small" style={{ height: '100%' }}>
         <Flex align="center" justify="start" gap="medium">
           <Space>
-            <Flex align="center" justify="center" style={{ width: '32px', height: '32px' }}>
+            <Flex align="center" justify="center" style={{ width: '24px', height: '24px' }}>
               <Tooltip title="AMAI - Amoza AI Assistant" placement="bottomLeft">
-                <Avatar size={24} src={<img draggable={false} src={avatarLight} alt="avatar" />} />
+                <Avatar size={22} src={<img draggable={false} src={avatarLight} alt="avatar" />} />
               </Tooltip>
             </Flex>
           </Space>
