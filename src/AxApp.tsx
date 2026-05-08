@@ -9,7 +9,7 @@ import './acore/i18n'
 function AxApp() {
   return (
     <StoreContext.Provider value={rootStore}>
-      <ConfigProvider theme={axTheme} getPopupContainer={() => document.body}>
+      <ConfigProvider theme={axTheme}>
         <AntApp>
           <RouterProvider router={index} />
         </AntApp>

@@ -1,26 +1,27 @@
 import { observer } from 'mobx-react-lite'
-import { ConfigProvider, Splitter } from 'antd'
+import { ConfigProvider, Splitter, theme } from 'antd'
 import { createStyles } from 'antd-style'
 import { AxSimplePanel } from '../../shared/simple-panel/AxSimplePanel.tsx'
 
-const useStyles = createStyles(() => ({
+const useStyles = createStyles(({ token }) => ({
   dragger: {
     '&::before': {
-      background: '#bfbfbf !important',
+      background: `${token.colorBgLayout} !important`,
     },
     '&:hover::before': {
-      background: '#bfbfbf !important',
+      background: `${token.colorBgLayout} !important`,
     },
   },
   draggerActive: {
     '&::before': {
-      background: '#bfbfbf !important',
+      background: `${token.colorBgLayout} !important`,
     },
   },
 }))
 
 export const HomePage = observer(() => {
-  const { styles } = useStyles()
+  const { token } = theme.useToken()
+  const { styles } = useStyles(token)
 
   return (
     <ConfigProvider

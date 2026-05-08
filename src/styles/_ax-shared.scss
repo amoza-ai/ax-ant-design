@@ -82,14 +82,19 @@
 
 .ax-simple-panel {
   @apply w-full h-full rounded;
+  @apply bg-white;
 
   &_header {
-    @apply w-full h-9 rounded-t bg-neutral-200 px-2;
+    @apply w-full h-9 px-2  rounded-t;
+    @apply flex items-center justify-between;
     @apply border-b border-gray-300;
+    @apply bg-neutral-100;
 
     &_title {
+      @apply flex items-center justify-start gap-1;
       &_icon {
-        @apply w-6 h-6 flex items-center justify-center;
+        @apply w-6 h-6;
+        @apply flex items-center justify-center;
       }
 
       &_text {
@@ -99,7 +104,7 @@
 
     &_option {
       &_button {
-        @apply w-5 h-5 flex items-center justify-center;
+        @apply w-6 h-6 flex items-center justify-center;
         @apply ax-button;
       }
     }
@@ -107,7 +112,7 @@
 
   &_body {
     height: calc(100% - 36px);
-    @apply w-full rounded-b bg-neutral-100;
+    @apply w-full rounded-b bg-white;
   }
 }
 

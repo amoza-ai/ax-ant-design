@@ -13,7 +13,8 @@ export default {
         'ax-success': '#4caf50',
       },
       fontFamily: {
-        sans: ['Roboto', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+        sans: ['Roboto', '-apple-system', 'sans-serif'],
+        serif: ['Roboto', '-apple-system', 'serif'],
       },
       fontSize: {
         base: ['14px', '1.5'],

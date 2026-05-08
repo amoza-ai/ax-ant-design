@@ -1,4 +1,7 @@
-import type { ThemeConfig } from 'antd'
+import { type ThemeConfig } from 'antd'
+import type { AliasToken } from 'antd/es/theme/interface'
+import antDToken from './token'
+const myToken = { ...antDToken } as Partial<AliasToken>
 
 export const axColors = {
   primary: '#3F51B5',
@@ -14,23 +17,25 @@ export const axColors = {
   panel: '#f5f5f5',
   action: '#434343',
 } as const
+export const axFontFamily = `'Roboto', -apple-system, sans-serif`
 
-export const axFontFamily = `'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`
+myToken.colorPrimary = axColors.primary
+myToken.fontFamily = axFontFamily
+
+myToken.colorText = '#262626'
+myToken.colorBgLayout = '#bfbfbf'
 
 export const axTheme: ThemeConfig = {
-  token: {
-    colorPrimary: axColors.primary,
-    fontFamily: axFontFamily,
-  },
+  token: { ...myToken },
   components: {
     Layout: {
       headerHeight: 40,
       headerPadding: '0 4px',
       footerPadding: '0 44px',
-      bodyBg: axColors.body,
-      headerBg: axColors.body,
-      footerBg: axColors.body,
-      siderBg: axColors.body,
+      bodyBg: myToken.colorBgLayout,
+      headerBg: myToken.colorBgLayout,
+      footerBg: myToken.colorBgLayout,
+      siderBg: myToken.colorBgLayout,
     },
     Splitter: {
       splitBarSize: 2,
