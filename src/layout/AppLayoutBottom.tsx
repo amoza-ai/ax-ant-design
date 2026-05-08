@@ -7,14 +7,14 @@ import { AxChatItem } from '../shared/chat-item/AxChatItem.tsx'
 export const AppLayoutBottom = observer(() => {
   return (
     <Layout.Footer>
-      <Flex align="center" justify="space-between" gap="small" style={{ height: '40px' }}>
+      <Flex align="center" justify="space-between" gap="small" style={{ height: '36px' }}>
         <Flex align="center" justify="start" gap="small">
           <AxBreadcrumb icon="mdiCardTextOutline" label="aPlanner" />
-          <AxIconBox icon="mdiChevronRight" />
+          <AxIconBox icon="mdiChevronRight" size={20} className="ax-breadcrumb_divider" />
           <AxBreadcrumb icon="mdiCardTextOutline" label="Discover" />
-          <AxIconBox icon="mdiChevronRight" />
+          <AxIconBox icon="mdiChevronRight" size={20} className="ax-breadcrumb_divider" />
           <AxBreadcrumb icon="mdiCardTextOutline" label="Planning" />
-          <AxIconBox icon="mdiChevronRight" />
+          <AxIconBox icon="mdiChevronRight" size={20} className="ax-breadcrumb_divider" />
           <AxBreadcrumb icon="mdiCardTextOutline" label="Objectives & Plan" />
         </Flex>
         <Flex align="center" justify="end" gap="small">

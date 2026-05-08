@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite'
-import { Flex, Tooltip } from 'antd'
+import { Tooltip } from 'antd'
 import type { TooltipPlacement } from 'antd/es/tooltip'
 import { AxMuiIcon } from '../mui-icon/AxMuiIcon.tsx'
 
@@ -13,19 +13,17 @@ export type AxMenuIconProps = {
 
 export const AxChatItem = observer((props: AxMenuIconProps) => {
   return (
-    <Flex className="ax-chat-item" align="center" justify="start" gap="small">
+    <div className="ax-chat-item">
       <Tooltip title={props.title} placement={props.placement}>
-        <button className="ax-chat-item_action" onClick={props.onClick}>
-          <Flex align="center" justify="space-between" gap="small" style={{ height: '100%' }}>
-            <AxMuiIcon icon="mdiAccountCircleOutline" size="20px" className="ax-chat-item_action_icon" />
-            <p className="ax-chat-item_action_name">{props.name}</p>
-            <p className="ax-chat-item_action_count">{props.count}</p>
-          </Flex>
+        <button className="ax-chat-item_left" onClick={props.onClick}>
+          <AxMuiIcon icon="mdiAccountCircleOutline" size="20px" className="ax-chat-item_left_icon" />
+          <p className="ax-chat-item_left_name">{props.name}</p>
+          <p className="ax-chat-item_left_count">({props.count})</p>
         </button>
       </Tooltip>
-      <button className="ax-chat-item_close" onClick={props.onClick}>
-        <AxMuiIcon icon="mdiWindowClose" size="16px" className="ax-chat-item_close_icon" />
+      <button className="ax-chat-item_right" onClick={props.onClick}>
+        <AxMuiIcon icon="mdiWindowClose" size="16px" className="ax-chat-item_right_icon" />
       </button>
-    </Flex>
+    </div>
   )
 })

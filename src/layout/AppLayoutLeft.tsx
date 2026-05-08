@@ -4,8 +4,8 @@ import { AxMenuIcon } from '../shared/menu-icon/AxMenuIcon.tsx'
 
 export const AppLayoutLeft = observer(() => {
   return (
-    <Layout.Sider width={40}>
-      <Flex align="center" justify="space-between" gap="small" vertical style={{ width: '100%', height: '100%', padding: '2px 4px' }}>
+    <Layout.Sider width={36}>
+      <Flex align="center" justify="space-between" gap="small" vertical style={{ width: '100%', height: '100%', padding: '4px' }}>
         <Flex align="center" justify="start" gap="small" vertical style={{ width: '100%' }}>
           <Space vertical size={8}>
             <AxMenuIcon icon="mdiDnsOutline" title={'Project'} placement="right" onClick={() => console.log('click')} />

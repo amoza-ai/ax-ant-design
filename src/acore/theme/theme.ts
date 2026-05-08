@@ -29,7 +29,7 @@ export const axTheme: ThemeConfig = {
   token: { ...myToken },
   components: {
     Layout: {
-      headerHeight: 40,
+      headerHeight: 36,
       headerPadding: '0 4px',
       footerPadding: '0 44px',
       bodyBg: myToken.colorBgLayout,

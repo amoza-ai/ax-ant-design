@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react-lite'
 import { cloneElement, isValidElement, type ReactElement } from 'react'
-import { Flex, Tooltip } from 'antd'
+import { Tooltip } from 'antd'
 import type { TooltipPlacement } from 'antd/es/tooltip'
 import { AxMuiIcon } from '../mui-icon/AxMuiIcon.tsx'
 
@@ -21,11 +21,9 @@ export const AxMenuBox = observer((props: AxMenuIconProps) => {
   return (
     <Tooltip title={props.title} placement={props.placement}>
       <button className="ax-menu-box" onClick={props.onClick}>
-        <Flex align="center" justify="space-between" gap="small" style={{ height: '100%' }}>
-          {myIcon}
-          <p className="ax-menu-box_text">{props.label}</p>
-          <AxMuiIcon icon="mdiMenuDown" size="16px" className="ax-menu-box_down" />
-        </Flex>
+        {myIcon}
+        <p className="ax-menu-box_text">{props.label}</p>
+        <AxMuiIcon icon="mdiMenuDown" size="16px" className="ax-menu-box_down" />
       </button>
     </Tooltip>
   )

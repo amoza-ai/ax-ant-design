@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react-lite'
 import { cloneElement, isValidElement, type ReactElement } from 'react'
-import { Flex, Tooltip } from 'antd'
+import { Tooltip } from 'antd'
 import type { TooltipPlacement } from 'antd/es/tooltip'
 import { AxMuiIcon } from '../mui-icon/AxMuiIcon.tsx'
 
@@ -21,10 +21,8 @@ export const AxBreadcrumb = observer((props: AxMenuIconProps) => {
   return (
     <Tooltip title={props.title} placement={props.placement}>
       <button className="ax-breadcrumb" onClick={props.onClick}>
-        <Flex align="center" justify="space-between" gap="small" style={{ height: '100%' }}>
-          {myIcon}
-          <p className="ax-breadcrumb_text">{props.label}</p>
-        </Flex>
+        {myIcon}
+        <p className="ax-breadcrumb_text">{props.label}</p>
       </button>
     </Tooltip>
   )

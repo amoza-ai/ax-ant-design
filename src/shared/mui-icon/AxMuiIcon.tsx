@@ -13,14 +13,14 @@ const paths = mdiPaths as unknown as Record<string, string>
 export const AxMuiIcon = observer((props: MuiIconProps) => {
   const path = paths[props.icon]
   if (!path) return null
-  const size = `${props.size}px`.replace('pxpx', 'px') ?? `24px`
+  const size = props.size ? (typeof props.size === 'number' ? `${props.size}px` : props.size) : '24px'
   return (
     <svg
-      className={props.className}
       width={size}
       height={size}
-      fill={props.color ?? 'currentColor'}
       viewBox="0 0 24 24"
+      className={props.className}
+      fill={props.color ?? 'currentColor'}
       style={{ display: 'inline-block', width: size, height: size }}
     >
       <path d={path} />
