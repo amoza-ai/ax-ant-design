@@ -48,6 +48,25 @@
   }
 }
 
+.ax-chat-item {
+  @apply w-auto h-7 rounded-md cursor-pointer flex items-center justify-center px-1;
+  @apply bg-transparent text-inherit transition-colors duration-150 ease-in-out;
+  @apply border border-gray-500;
+
+  &_text {
+    @apply text-sm text-ellipsis font-medium;
+  }
+
+  &:hover {
+    @apply bg-black/5;
+  }
+
+  &:active,
+  &.is-active {
+    @apply bg-ax-primary text-white;
+  }
+}
+
 .ax-simple-panel {
   @apply w-full h-full rounded bg-neutral-100;
 
