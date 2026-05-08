@@ -1,3 +1,16 @@
+.ax-button {
+  @apply rounded-md cursor-pointer flex items-center justify-center;
+  @apply bg-transparent text-inherit transition-colors duration-150 ease-in-out;
+  &:hover {
+    @apply bg-neutral-300;
+  }
+
+  &:active,
+  &.is-active {
+    @apply bg-neutral-500 text-white;
+  }
+}
+
 .ax-menu-icon {
   @apply w-7 h-7 rounded-md cursor-pointer flex items-center justify-center;
   @apply bg-transparent text-inherit transition-colors duration-150 ease-in-out;
@@ -68,25 +81,33 @@
 }
 
 .ax-simple-panel {
-  @apply w-full h-full rounded bg-neutral-100;
+  @apply w-full h-full rounded;
 
   &_header {
-    @apply h-9 flex items-center justify-between gap-2 px-2;
+    @apply w-full h-9 rounded-t bg-neutral-200 px-2;
     @apply border-b border-gray-300;
+
     &_title {
-      @apply flex items-center justify-start gap-1;
       &_icon {
         @apply w-6 h-6 flex items-center justify-center;
       }
 
       &_text {
-        @apply font-semibold;
+        @apply font-bold;
+      }
+    }
+
+    &_option {
+      &_button {
+        @apply w-5 h-5 flex items-center justify-center;
+        @apply ax-button;
       }
     }
   }
 
   &_body {
-    @apply w-full h-full p-2;
+    height: calc(100% - 36px);
+    @apply w-full rounded-b bg-neutral-100;
   }
 }
 

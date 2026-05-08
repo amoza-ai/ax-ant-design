@@ -18,14 +18,7 @@ export default {
       fontSize: {
         base: ['14px', '1.5'],
       },
-      fontWeight: {
-        normal: '400',
-        medium: '500',
-        semibold: '700',
-        bold: '900',
-      },
     },
   },
   plugins: [],
 }
-
